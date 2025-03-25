@@ -1,0 +1,112 @@
+{
+  "horses": [
+    {
+      "id": 1,
+      "breed": "American Quarter Horse",
+      "description": "Known for strength and agility",
+      "origin": "USA",
+      "height": "14.2-16 hands",
+      "weight": "950-1200 lbs",
+      "temperament": "Intelligent, calm, willing to please",
+      "therapyUses": "Physical therapy, emotional support",
+      "uses": ["Western pleasure", "barrel racing", "trail riding"]
+    },
+    {
+      "id": 2,
+      "breed": "Arabian",
+      "description": "One of the oldest horse breeds",
+      "origin": "Middle East",
+      "height": "14.1-16 hands",
+      "weight": "800-1100 lbs",
+      "temperament": "Intelligent, athletic, gentle",
+      "therapyUses": "Therapeutic riding programs",
+      "uses": ["Endurance", "English pleasure", "show jumping"]
+    },
+    {
+      "id": 3,
+      "breed": "Appaloosa",
+      "description": "Distinctive spotted coat pattern",
+      "origin": "USA",
+      "height": "14.2-16 hands",
+      "weight": "950-1200 lbs",
+      "temperament": "Friendly, curious, energetic",
+      "therapyUses": "Equine-assisted learning",
+      "uses": ["Western disciplines", "trail riding"]
+    },
+    {
+      "id": 4,
+      "breed": "Thoroughbred",
+      "description": "Bred for speed and endurance",
+      "origin": "England",
+      "height": "15.2-17 hands",
+      "weight": "900-1300 lbs",
+      "temperament": "Athletic, focused, determined",
+      "therapyUses": "Physical rehabilitation",
+      "uses": ["Racing", "eventing", "show jumping"]
+    },
+    {
+      "id": 5,
+      "breed": "Tennessee Walking Horse",
+      "description": "Known for smooth gait",
+      "origin": "USA",
+      "height": "14.2-17 hands",
+      "weight": "900-1200 lbs",
+      "temperament": "Gentle, calm, patient",
+      "therapyUses": "Therapy programs, beginner riders",
+      "uses": ["Trail riding", "pleasure riding"]
+    }
+  ],
+"users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@horsetherapy.com",
+      "password": "admin123",
+      "role": "admin"
+    }
+],
+  "appointments": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "phone": "555-0123",
+      "service": "Physical therapy",
+      "date": "2025-04-01",
+      "time": "10:00",
+      "message": "Initial consultation for physical therapy",
+      "status": "pending",
+      "horseId": 1,
+      "createdAt": "2025-03-25T14:30:00"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "name": "Physical therapy",
+      "description": "Therapeutic riding for physical rehabilitation",
+      "duration": 60,
+      "price": 75.00,
+      "availableHorses": [1, 2],
+      "requirements": ["Medical clearance", "Initial consultation"]
+    },
+    {
+      "id": 2,
+      "name": "Emotional support",
+      "description": "Equine-assisted emotional support therapy",
+      "duration": 45,
+      "price": 60.00,
+      "availableHorses": [3, 4],
+      "requirements": ["Initial consultation"]
+    }
+  ],
+  "availability": [
+    {
+      "id": 1,
+      "horseId": 1,
+      "dayOfWeek": "Monday",
+      "timeSlots": ["09:00", "10:30", "14:00"],
+      "maxAppointments": 3
+    }
+  ]
+}
