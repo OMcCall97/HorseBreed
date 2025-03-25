@@ -1,0 +1,35 @@
+<div class="about-container">
+    <h1>{{ title }}</h1>
+    <div class="content-section">
+      <p>{{ content.introduction }}</p>
+    </div>
+  
+    <div class="program-sections">
+      <!-- Therapy Section -->
+      <div class="program-card">
+        <h2>{{ content.therapy.title }}</h2>
+        <p>{{ content.therapy.description }}</p>
+        <ul class="services-list">
+          <li *ngFor="let service of content.therapy.services">{{ service }}</li>
+        </ul>
+      </div>
+  
+      <!-- Competitive Section -->
+      <div class="program-card">
+        <h2>{{ content.competitive.title }}</h2>
+        <p>{{ content.competitive.description }}</p>
+        <ul class="disciplines-list">
+          <li *ngFor="let discipline of content.competitive.disciplines">{{ discipline }}</li>
+        </ul>
+      </div>
+  
+      <!-- Trail Section -->
+      <div class="program-card">
+        <h2>{{ content.trail.title }}</h2>
+        <p>{{ content.trail.description }}</p>
+        <ul class="activities-list">
+          <li *ngFor="let activity of content.trail.activities">{{ activity }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>

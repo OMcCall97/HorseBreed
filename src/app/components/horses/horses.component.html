@@ -1,0 +1,27 @@
+<div class="horses-container">
+    <h1>Our Breeds Of Horses</h1>
+    <div class="horses-grid">
+      <div class="horse-detail" *ngFor="let horse of horses">
+        <h2>{{ horse.breed }}</h2>
+        <div class="horse-info">
+          <div class="info-section">
+            <h3>Physical Characteristics</h3>
+            <p>Height: {{ horse.height }}</p>
+            <p>Weight: {{ horse.weight }}</p>
+          </div>
+          <div class="info-section">
+            <h3>Temperament</h3>
+            <p>{{ horse.temperament }}</p>
+          </div>
+          <div class="info-section">
+            <h3>Therapy Uses</h3>
+            <p>{{ horse.therapyUses }}</p>
+          </div>
+          <div class="info-section">
+            <h3>Primary Uses</h3>
+            <p>{{ horse.uses.join(', ') }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
