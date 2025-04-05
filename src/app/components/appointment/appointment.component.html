@@ -1,0 +1,27 @@
+<div class="appointments-container">
+    <h2>Scheduled Appointments</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Service</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let appointment of appointments">
+          <td>{{ appointment.name }}</td>
+          <td>{{ appointment.email }}</td>
+          <td>{{ appointment.phone }}</td>
+          <td>{{ appointment.service }}</td>
+          <td>{{ appointment.date }}</td>
+          <td>{{ appointment.time }}</td>
+          <td>{{ appointment.status }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

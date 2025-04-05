@@ -9,7 +9,8 @@
       "weight": "950-1200 lbs",
       "temperament": "Intelligent, calm, willing to please",
       "therapyUses": "Physical therapy, emotional support",
-      "uses": ["Western pleasure", "barrel racing", "trail riding"]
+      "uses": ["Western pleasure", "barrel racing", "trail riding"],
+      "image": "assets/image/quarter-horse.jpg"
     },
     {
       "id": 2,

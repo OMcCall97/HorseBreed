@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from '../../services/authentication.service';
+import { Router } from '@angular/router';
 
-type NewType = AuthService;
+// type NewType = AuthService;
 
 @Component({
-  selector: 'app-signup',
+ selector: 'app-signup',
   standalone: true,
   imports: [],
   templateUrl: './signup.component.html',
@@ -11,16 +13,11 @@ type NewType = AuthService;
 })
 export class SignupComponent {
   signUpForm: any;
-  public get authService(): NewType {
-    return this._authService;
-  }
-  public set authService(value: AuthService) {
-    this._authService = value;
-  }
+
   constructor(
-    private _authService: AuthService,
+    private authService: AuthenticationService,
     private router: Router,
-    private formBuilder: FormBuilder
+    // private formBuilder: FormBuilder
   ) {}
 
   ngOnInit(): void {}

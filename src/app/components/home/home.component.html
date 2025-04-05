@@ -1,1 +1,15 @@
-<p>home works!</p>
+<div class="home-container">
+    <h1>Welcome to the Horse Center</h1>
+    <div class="horse-grid">
+      <div class="horse-card" *ngFor="let horse of horses">
+        <h2>{{ horse.breed }}</h2>
+        <p>{{ horse.description }}</p>
+        <p>Origin: {{ horse.origin }}</p>
+        <p>Height: {{ horse.height }}</p>
+        <p>Weight: {{ horse.weight }}</p>
+        <p>Temperament: {{ horse.temperament }}</p>
+        <p>Therapy Uses: {{ horse.therapyUses }}</p>
+        <p>Uses: {{ horse.uses.join(', ') }}</p>
+      </div>
+    </div>
+  </div>
