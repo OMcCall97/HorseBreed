@@ -1,27 +1,132 @@
-<div class="appointments-container">
-    <h2>Scheduled Appointments</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Phone</th>
-          <th>Service</th>
-          <th>Date</th>
-          <th>Time</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let appointment of appointments">
-          <td>{{ appointment.name }}</td>
-          <td>{{ appointment.email }}</td>
-          <td>{{ appointment.phone }}</td>
-          <td>{{ appointment.service }}</td>
-          <td>{{ appointment.date }}</td>
-          <td>{{ appointment.time }}</td>
-          <td>{{ appointment.status }}</td>
-        </tr>
-      </tbody>
-    </table>
+<div class="appointment-container">
+  <h2>Schedule an Appointment</h2>
+  
+  <div *ngIf="success" class="success-message">
+    Your appointment has been successfully scheduled! We'll contact you soon to confirm.
   </div>
+
+  <div *ngIf="error" class="error-message">
+    {{ error }}
+  </div>
+
+  <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()" class="appointment-form">
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input 
+        id="name" 
+        type="text" 
+        formControlName="name"
+        [class.invalid]="submitted && appointmentForm.get('name')?.errors"
+      >
+      <div class="error-hint" *ngIf="submitted && appointmentForm.get('name')?.errors?.['required']">
+        Name is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input 
+        id="email" 
+        type="email" 
+        formControlName="email"
+        [class.invalid]="submitted && appointmentForm.get('email')?.errors"
+      >
+      <div class="error-hint" *ngIf="submitted && appointmentForm.get('email')?.errors?.['required']">
+        Email is required
+      </div>
+      <div class="error-hint" *ngIf="submitted && appointmentForm.get('email')?.errors?.['email']">
+        Please enter a valid email address
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input 
+        id="phone" 
+        type="tel" 
+        formControlName="phone"
+        [class.invalid]="submitted && appointmentForm.get('phone')?.errors"
+      >
+      <div class="error-hint" *ngIf="submitted && appointmentForm.get('phone')?.errors?.['required']">
+        Phone number is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="service">Service Type</label>
+      <select 
+        id="service" 
+        formControlName="service"
+        [class.invalid]="submitted && appointmentForm.get('service')?.errors"
+      >
+        <option value="">Select a service</option>
+        <option *ngFor="let service of services" [value]="service">
+          {{ service }}
+        </option>
+      </select>
+      <div class="error-hint" *ngIf="submitted && appointmentForm.get('service')?.errors?.['required']">
+        Please select a service
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="horse">Preferred Horse</label>
+      <select 
+        id="horse" 
+        formControlName="horseId"
+        [class.invalid]="submitted && appointmentForm.get('horseId')?.errors"
+      >
+        <option value="">Select a horse</option>
+        <option *ngFor="let horse of horses$ | async" [value]="horse.id">
+          {{ horse.breed }}
+        </option>
+      </select>
+      <div class="error-hint" *ngIf="submitted && appointmentForm.get('horseId')?.errors?.['required']">
+        Please select a horse
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="date">Preferred Date</label>
+        <input 
+          id="date" 
+          type="date" 
+          formControlName="date"
+          [class.invalid]="submitted && appointmentForm.get('date')?.errors"
+        >
+        <div class="error-hint" *ngIf="submitted && appointmentForm.get('date')?.errors?.['required']">
+          Date is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="time">Preferred Time</label>
+        <input 
+          id="time" 
+          type="time" 
+          formControlName="time"
+          [class.invalid]="submitted && appointmentForm.get('time')?.errors"
+        >
+        <div class="error-hint" *ngIf="submitted && appointmentForm.get('time')?.errors?.['required']">
+          Time is required
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Additional Notes</label>
+      <textarea 
+        id="message" 
+        formControlName="message"
+        rows="4"
+        [class.invalid]="submitted && appointmentForm.get('message')?.errors"
+      ></textarea>
+      <div class="error-hint" *ngIf="submitted && appointmentForm.get('message')?.errors?.['required']">
+        Please provide additional details about your appointment
+      </div>
+    </div>
+
+    <button type="submit" class="submit-button">Schedule Appointment</button>
+  </form>
+</div>

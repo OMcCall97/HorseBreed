@@ -1,27 +1,43 @@
 <div class="horses-container">
     <h1>Our Breeds Of Horses</h1>
-    <div class="horses-grid">
-      <div class="horse-detail" *ngFor="let horse of horses">
-        <h2>{{ horse.breed }}</h2>
+    <div class="horse-grid">
+      <div class="horse-card" *ngFor="let horse of horses">
+        <div class="horse-image">
+          <img [src]="horse.image || 'assets/image/placeholder-horse.jpg'" [alt]="horse.breed">
+        </div>
         <div class="horse-info">
-          <div class="info-section">
-            <h3>Physical Characteristics</h3>
-            <p>Height: {{ horse.height }}</p>
-            <p>Weight: {{ horse.weight }}</p>
+          <h2>{{ horse.breed }}</h2>
+          <p class="description">{{ horse.description }}</p>
+          
+          <div class="info-grid">
+            <div class="info-item">
+              <strong>Origin:</strong>
+              <span>{{ horse.origin }}</span>
+            </div>
+            <div class="info-item">
+              <strong>Height:</strong>
+              <span>{{ horse.height }}</span>
+            </div>
+            <div class="info-item">
+              <strong>Weight:</strong>
+              <span>{{ horse.weight }}</span>
+            </div>
+            <div class="info-item">
+              <strong>Temperament:</strong>
+              <span>{{ horse.temperament }}</span>
+            </div>
           </div>
-          <div class="info-section">
-            <h3>Temperament</h3>
-            <p>{{ horse.temperament }}</p>
-          </div>
-          <div class="info-section">
+  
+          <div class="therapy-section">
             <h3>Therapy Uses</h3>
             <p>{{ horse.therapyUses }}</p>
           </div>
-          <div class="info-section">
-            <h3>Primary Uses</h3>
-            <p>{{ horse.uses.join(', ') }}</p>
+  
+          <div class="uses-section">
+            <h3>Common Uses</h3>
+            <ul>
+              <li *ngFor="let use of horse.uses">{{ use }}</li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-  </div>
