@@ -1,15 +1,28 @@
-<div class="home-container">
-    <h1>Welcome to the Horse Center</h1>
-    <div class="horse-grid">
-      <div class="horse-card" *ngFor="let horse of horses">
-        <h2>{{ horse.breed }}</h2>
-        <p>{{ horse.description }}</p>
-        <p>Origin: {{ horse.origin }}</p>
-        <p>Height: {{ horse.height }}</p>
-        <p>Weight: {{ horse.weight }}</p>
-        <p>Temperament: {{ horse.temperament }}</p>
-        <p>Therapy Uses: {{ horse.therapyUses }}</p>
-        <p>Uses: {{ horse.uses.join(', ') }}</p>
+
+
+<header class="hero">
+    <div class="hero-content">
+      <h1>Healing Through Horse Power</h1>
+      <p>Discover emotional and physical transformation through horse therapy and riding experiences.</p>
+      <a routerLink="/signup" class="btn">Get Started</a>
+    </div>
+  </header>
+  
+  <section class="services-section">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <div class="service-cards">
+        <div class="card">
+          <img src="https://images.pexels.com/photos/4913027/pexels-photo-4913027.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Therapy" />
+          <h4>Physical Therapy</h4>
+          <p>Therapeutic riding sessions focused on rehabilitation, strength, and mobility improvements.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.pexels.com/photos/5989591/pexels-photo-5989591.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Support" />
+          <h4>Emotional Support</h4>
+          <p>Horse-assisted programs that improve confidence, reduce anxiety, and promote mindfulness.</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+  

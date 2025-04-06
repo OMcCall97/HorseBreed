@@ -1,2 +1,19 @@
+<!-- app.component.html -->
 
-<router-outlet />
+<nav class="navbar">
+  <div class="container">
+    <h1 class="logo">Horse Therapy</h1>
+    <ul class="nav-links">
+      <li><a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active-link">About</a></li>
+      <li><a routerLink="/horses" routerLinkActive="active-link">Horses</a></li>
+      <li><a routerLink="/signup" routerLinkActive="active-link">Sign Up</a></li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer class="footer">
+  <p>&copy; 2025 Horse Therapy. All rights reserved.</p>
+</footer>

@@ -1,0 +1,97 @@
+/* styles.css or app.component.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    background-color: #2e3a59;
+    color: white;
+    padding: 1rem 0;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .hero {
+    background-image: url('https://images.pexels.com/photos/209065/pexels-photo-209065.jpeg?auto=compress&cs=tinysrgb&w=600'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  
+  .btn {
+    background-color: #f4a261;
+    padding: 0.7rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    display: inline-block;
+  }
+  
+  .services {
+    padding: 3rem 0;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .footer {
+    background-color: #2e3a59;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  .nav-links a.active-link {
+  font-weight: bold;
+  border-bottom: 2px solid #f4a261;
+}
+.nav-links a.active-link {
+    font-weight: bold;
+    border-bottom: 2px solid #f4a261;
+  }
+  

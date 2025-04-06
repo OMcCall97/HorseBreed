@@ -34,28 +34,28 @@ export class AuthenticationService {
     return this.currentUserSubject.asObservable();
   }
 
-   signUp(userData: {
-    username: string;
-    email: string;
-    password: string;
-  }): Observable<User> {
-    return this.http.post<User>('http://localhost:3000/users', userData).pipe(
-      tap((user) => {
-        this.handleLogin(user);
-      })
-    );
-  }
+  //  signUp(userData: {
+  //   username: string;
+  //   email: string;
+  //   password: string;
+  // }): Observable<User> {
+  //   return this.http.post<User>('http://localhost:3000/users', userData).pipe(
+  //     tap((user) => {
+  //       this.handleLogin(user);
+  //     })
+  //   );
+  // }
 
-  login(credentials: {
-    email: string;
-    password: string;
-  }): Observable<User> {
-    return this.http.post<User>('http://localhost:3000/auth/login', credentials).pipe(
-      tap((user) => {
-        this.handleLogin(user);
-      })
-    );
-  }
+  // login(credentials: {
+  //   email: string;
+  //   password: string;
+  // }): Observable<User> {
+  //   return this.http.post<User>('http://localhost:3000/auth/login', credentials).pipe(
+  //     tap((user) => {
+  //       this.handleLogin(user);
+  //     })
+  //   );
+  // }
 
   logout(): void {
     if (typeof window !== 'undefined' && window.sessionStorage) {

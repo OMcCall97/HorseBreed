@@ -22,16 +22,16 @@ export class SignupComponent {
 
   ngOnInit(): void {}
 
-  onSubmit(): void {
-    if (this.signUpForm.valid) {
-      this.authService.signUp(this.signUpForm.value).subscribe({
-        next: () => {
-          this.router.navigate(['/login']);
-        },
-        error: (error: any) => {
-          console.error('Error signing up:', error);
-        }
-      });
-    }
-  }
+  // onSubmit(): void {
+  //   if (this.signUpForm.valid) {
+  //     this.authService.signUp(this.signUpForm.value).subscribe({
+  //       next: () => {
+  //         this.router.navigate(['/login']);
+  //       },
+  //       error: (error: any) => {
+  //         console.error('Error signing up:', error);
+  //       }
+  //     });
+  //   }
+  // }
 }
