@@ -15,7 +15,4 @@ export class HorseService {
   getAllHorses(): Observable<Horse[]> {
     return this.http.get<Horse[]>(this.apiUrl);
   }
-  getHorseById(id: number): Observable<Horse> {
-    return this.http.get<Horse>(`${this.apiUrl}/${id}`);
-}
 }

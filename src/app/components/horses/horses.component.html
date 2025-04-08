@@ -1,27 +1,71 @@
 <div class="horses-container">
-    <h1>Our Breeds Of Horses</h1>
-    <div class="horses-grid">
-      <div class="horse-detail" *ngFor="let horse of horses">
-        <h2>{{ horse.breed }}</h2>
-        <div class="horse-info">
-          <div class="info-section">
-            <h3>Physical Characteristics</h3>
-            <p>Height: {{ horse.height }}</p>
-            <p>Weight: {{ horse.weight }}</p>
-          </div>
-          <div class="info-section">
-            <h3>Temperament</h3>
-            <p>{{ horse.temperament }}</p>
-          </div>
-          <div class="info-section">
-            <h3>Therapy Uses</h3>
-            <p>{{ horse.therapyUses }}</p>
-          </div>
-          <div class="info-section">
-            <h3>Primary Uses</h3>
-            <p>{{ horse.uses.join(', ') }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="horse-card">
+    <img
+      src="https://images.pexels.com/photos/11730924/pexels-photo-11730924.jpeg?auto=compress&cs=tinysrgb&w=600"
+      alt="American Quarter Horse"
+      class="horse-image"
+    />
+    <h3>American Quarter Horse</h3>
+    <p><strong>Description:</strong> Known for strength and agility</p>
+    <p><strong>Origin:</strong> USA</p>
+    <p><strong>Height:</strong> 14.2-16 hands</p>
+    <p><strong>Weight:</strong> 950-1200 lbs</p>
+    <p><strong>Temperament:</strong> Intelligent, calm, willing to please</p>
   </div>
+
+  <div class="horse-card">
+    <img
+      src="https://images.pexels.com/photos/29632854/pexels-photo-29632854/free-photo-of-dynamic-shot-of-horse-galloping-on-farm.jpeg?auto=compress&cs=tinysrgb&w=600"
+      alt="Arabian Horse"
+      class="horse-image"
+    />
+    <h3>Arabian</h3>
+    <p><strong>Description:</strong> One of the oldest horse breeds</p>
+    <p><strong>Origin:</strong> Middle East</p>
+    <p><strong>Height:</strong> 14.1-16 hands</p>
+    <p><strong>Weight:</strong> 800-1100 lbs</p>
+    <p><strong>Temperament:</strong> Intelligent, athletic, gentle</p>
+  </div>
+
+  <div class="horse-card">
+    <img
+      src="https://images.pexels.com/photos/7461598/pexels-photo-7461598.jpeg?auto=compress&cs=tinysrgb&w=600"
+      alt="Appaloosa"
+      class="horse-image"
+    />
+    <h3>Appaloosa</h3>
+    <p><strong>Description:</strong>Distinctive spotted coat pattern</p>
+    <p><strong>Origin:</strong> USA</p>
+    <p><strong>Height:</strong> 14.2-16 hands</p>
+    <p><strong>Weight:</strong>950-1200 lbs</p>
+    <p><strong>Temperament:</strong> Friendly, curious, energetic</p>
+  </div>
+
+  <div class="horse-card">
+    <img
+      src="https://images.pexels.com/photos/10479874/pexels-photo-10479874.jpeg?auto=compress&cs=tinysrgb&w=600"
+      alt="Thoroughbred"
+      class="horse-image"
+    />
+    <h3>Thoroughbred</h3>
+    <p><strong>Description:</strong> Bred for speed and endurance</p>
+    <p><strong>Origin:</strong> England</p>
+    <p><strong>Height:</strong> 15.2-17 hands</p>
+    <p><strong>Weight:</strong> 900-1300 lbs</p>
+    <p><strong>Temperament:</strong> Athletic, focused, determined</p>
+  </div>
+
+  <div class="horse-card">
+    <img
+      src="https://images.pexels.com/photos/133019/pexels-photo-133019.jpeg?auto=compress&cs=tinysrgb&w=600"
+      alt="Tennessee Walking Horse"
+      class="horse-image"
+    />
+    <h3>Tennessee Walking Horse</h3>
+    <p><strong>Description:</strong> Known for smooth gait</p>
+    <p><strong>Origin:</strong>USA</p>
+    <p><strong>Height:</strong> 14.2-17 hands</p>
+    <p><strong>Weight:</strong> 900-1200 lbs</p>
+    <p><strong>Temperament:</strong> Gentle, calm, patient</p>
+  </div>
+</div>

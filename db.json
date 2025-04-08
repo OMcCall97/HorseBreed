@@ -9,7 +9,11 @@
       "weight": "950-1200 lbs",
       "temperament": "Intelligent, calm, willing to please",
       "therapyUses": "Physical therapy, emotional support",
-      "uses": ["Western pleasure", "barrel racing", "trail riding"],
+      "uses": [
+        "Western pleasure",
+        "barrel racing",
+        "trail riding"
+      ],
       "image": "assets/image/quarter-horse.jpg"
     },
     {
@@ -21,7 +25,11 @@
       "weight": "800-1100 lbs",
       "temperament": "Intelligent, athletic, gentle",
       "therapyUses": "Therapeutic riding programs",
-      "uses": ["Endurance", "English pleasure", "show jumping"]
+      "uses": [
+        "Endurance",
+        "English pleasure",
+        "show jumping"
+      ]
     },
     {
       "id": 3,
@@ -32,7 +40,10 @@
       "weight": "950-1200 lbs",
       "temperament": "Friendly, curious, energetic",
       "therapyUses": "Equine-assisted learning",
-      "uses": ["Western disciplines", "trail riding"]
+      "uses": [
+        "Western disciplines",
+        "trail riding"
+      ]
     },
     {
       "id": 4,
@@ -43,7 +54,11 @@
       "weight": "900-1300 lbs",
       "temperament": "Athletic, focused, determined",
       "therapyUses": "Physical rehabilitation",
-      "uses": ["Racing", "eventing", "show jumping"]
+      "uses": [
+        "Racing",
+        "eventing",
+        "show jumping"
+      ]
     },
     {
       "id": 5,
@@ -54,10 +69,13 @@
       "weight": "900-1200 lbs",
       "temperament": "Gentle, calm, patient",
       "therapyUses": "Therapy programs, beginner riders",
-      "uses": ["Trail riding", "pleasure riding"]
+      "uses": [
+        "Trail riding",
+        "pleasure riding"
+      ]
     }
   ],
-"users": [
+  "users": [
     {
       "id": 1,
       "username": "admin",
@@ -65,7 +83,7 @@
       "password": "admin123",
       "role": "admin"
     }
-],
+  ],
   "appointments": [
     {
       "id": 1,
@@ -79,7 +97,21 @@
       "status": "pending",
       "horseId": 1,
       "createdAt": "2025-03-25T14:30:00"
+    },
+    {
+      "name": "test",
+      "email": "test@test.com",
+      "phone": "+250782245728",
+      "service": "",
+      "date": "2025-04-16",
+      "time": "17:49",
+      "message": "hello",
+      "status": "pending",
+      "horseId": null,
+      "createdAt": "2025-04-08T12:49:06.854Z",
+      "id": 2
     }
+
   ],
   "services": [
     {
@@ -87,18 +119,29 @@
       "name": "Physical therapy",
       "description": "Therapeutic riding for physical rehabilitation",
       "duration": 60,
-      "price": 75.00,
-      "availableHorses": [1, 2],
-      "requirements": ["Medical clearance", "Initial consultation"]
+      "price": 75,
+      "availableHorses": [
+        1,
+        2
+      ],
+      "requirements": [
+        "Medical clearance",
+        "Initial consultation"
+      ]
     },
     {
       "id": 2,
       "name": "Emotional support",
       "description": "Equine-assisted emotional support therapy",
       "duration": 45,
-      "price": 60.00,
-      "availableHorses": [3, 4],
-      "requirements": ["Initial consultation"]
+      "price": 60,
+      "availableHorses": [
+        3,
+        4
+      ],
+      "requirements": [
+        "Initial consultation"
+      ]
     }
   ],
   "availability": [
@@ -106,7 +149,11 @@
       "id": 1,
       "horseId": 1,
       "dayOfWeek": "Monday",
-      "timeSlots": ["09:00", "10:30", "14:00"],
+      "timeSlots": [
+        "09:00",
+        "10:30",
+        "14:00"
+      ],
       "maxAppointments": 3
     }
   ]

@@ -8,4 +8,4 @@ export interface Horse {
   temperament: string;
   therapyUses: string;
   uses: string[];
-}
+} 
