@@ -1,1 +1,34 @@
-<p>admin-dashboard works!</p>
+<h2 class="dashboard-title">All Appointments</h2>
+
+<table class="styled-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Service</th>
+      <th>Date</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let appointment of appointments">
+      <td>{{ appointment.name }}</td>
+      <td>{{ appointment.service || 'N/A' }}</td>
+      <td>{{ appointment.date }} at {{ appointment.time }}</td>
+      <td>
+        <span [ngClass]="{
+          'status-pending': appointment.status === 'pending',
+          'status-approved': appointment.status === 'approved',
+          'status-denied': appointment.status === 'denied'
+        }">
+          {{ appointment.status }}
+        </span>
+      </td>
+      <td>
+        <button class="btn btn-approve" (click)="approve(appointment.id)">Approve</button>
+        <button class="btn btn-deny" (click)="deny(appointment.id)">Deny</button>
+        <button class="btn btn-delete" (click)="delete(appointment.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
