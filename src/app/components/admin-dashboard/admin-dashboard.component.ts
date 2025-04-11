@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common'; // <-- THIS IS THE FIX
+import { CommonModule } from '@angular/common'; 
 import { AppointmentService } from '../../services/appointment.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-admin-dashboard',
   standalone: true,
-  imports: [CommonModule,HttpClientModule], // <-- MAKE SURE THIS IS INCLUDED
+  imports: [CommonModule,HttpClientModule], 
   templateUrl: './admin-dashboard.component.html',
   styleUrls: ['./admin-dashboard.component.css']
 })
